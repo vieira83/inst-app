@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 
-class Main extends Component {
+class Nav extends Component {
   render() {
     return (
         <div>
-          <h1>Simple SPA</h1>
-          <ul className="header">
+        <h4>Inst App</h4>
+          <ul className="Navigation">
             <li><a href="/">Home</a></li>
             <li><a href="/stuff">Stuff</a></li>
             <li><a href="/contact">Contact</a></li>
@@ -18,4 +18,4 @@ class Main extends Component {
   }
 }
 
-export default Main;
+export default Nav;

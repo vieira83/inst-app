@@ -1,0 +1,10 @@
+Follow - https://github.com/shouheiyamauchi/react-passport-example/blob/cf44d844740668c1a1a96e9627ef97b38d129e59/server/routes/auth.js
+Add authntication
+  JWT
+  https://scotch.io/tutorials/the-anatomy-of-a-json-web-token
+  https://medium.com/front-end-hacking/learn-using-jwt-with-passport-authentication-9761539c4314
+  https://blog.jscrambler.com/implementing-jwt-using-passport/
+  https://gist.github.com/JonathanMH/6bd82c0954fb8f21a837ce281da4265a
+
+router
+  https://www.kirupa.com/react/creating_single_page_app_react_using_react_router.htm

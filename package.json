@@ -3,12 +3,24 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "express" : "~4.14.0",                         
+    "mongoose" : "~4.13.1",
+    "passport" : "~0.3.2",
+    "passport-local" : "~1.0.0",
+    "passport-facebook" : "~2.1.1",
+    "passport-twitter" : "~1.0.4",
+    "passport-google-oauth" : "~1.0.0",
+    "connect-flash" : "~0.1.1",
+    "bcrypt-nodejs" : "latest",
+    "body-parser": "^1.18.2",
+    "morgan": "^1.9.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.7",
     "react-route": "^1.0.3",
     "react-router-dom": "^4.2.2",
-    "react-scripts": "1.1.1"
+    "react-scripts": "1.1.1",
+    "serve-favicon": "^2.4.5"
   },
   "scripts": {
     "start": "react-scripts start",

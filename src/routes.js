@@ -2,17 +2,21 @@
 import React from "react";
 import PropTypes from 'prop-types';
 // import {render} from "react-dom";
-import {Router, Route} from "react-router";
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom';
 // import { Provider } from 'react-redux';
+import Header from './Header';
 
 const Root = (props) => (
-
- <Router {...props}>
-   <Route path="/" >
-       <Route path="/contact"  />
-       <Route path="*"  />
-   </Route>
- </Router>
+  <Router>
+    <div>
+        <Header />
+        <Route exact path="/"  />
+    </div>
+  </Router>
 );
 //
 Root.propTypes = {
