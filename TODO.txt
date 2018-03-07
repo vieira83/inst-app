@@ -12,3 +12,7 @@ router
 
 REDIS - setup
 https://blog.risingstack.com/node-hero-node-js-authentication-passport-js/
+
+
+OAuth2/jwt
+https://softwareengineering.stackexchange.com/questions/298973/rest-api-security-stored-token-vs-jwt-vs-oauth
