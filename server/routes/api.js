@@ -1,3 +1,5 @@
+
+
 module.exports = function(app, passport) {
 
     // =====================================
@@ -11,7 +13,7 @@ module.exports = function(app, passport) {
     // LOGIN ===============================
     // =====================================
     // show the login form
-    app.get('/login', function(req, res) {
+    app.get('/login', function(req, res, next) {
 
         // render the page and pass in any flash data if it exists
         res.render('login', { message: req.flash('loginMessage') });
@@ -24,7 +26,7 @@ module.exports = function(app, passport) {
     // SIGNUP ==============================
     // =====================================
     // show the signup form
-    app.get('/signup', function(req, res) {
+    app.get('/signup', function(req, res, next) {
 
         // render the page and pass in any flash data if it exists
         res.render('signup', { message: req.flash('signupMessage') });

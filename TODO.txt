@@ -8,3 +8,7 @@ Add authntication
 
 router
   https://www.kirupa.com/react/creating_single_page_app_react_using_react_router.htm
+
+
+REDIS - setup
+https://blog.risingstack.com/node-hero-node-js-authentication-passport-js/
