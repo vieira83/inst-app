@@ -1,4 +1,25 @@
 Follow - https://github.com/shouheiyamauchi/react-passport-example/blob/cf44d844740668c1a1a96e9627ef97b38d129e59/server/routes/auth.js
+
+Setup - MONGODB
+  1- Install mongodb - install via yarn and add it to package.JSON
+  2- create a directory to store data - ex:mkdir -p ~data/db
+  3- Edit mongo config file - usr/etc/local/mongo.conf
+    set storage:
+    dbPath: /Users/vlad/data/mongodb - replace /usr by your username
+  4-launch mongo deamon -
+      mongod --config /user/local/etc/mongod.conf - Manual run
+      brew services start mongod --config /user/local/etc/mongod.conf   - start it as a service
+  5- interact with mongo:
+    - mongo
+    - show dbs
+    - use musiclist - create a  db
+    - db.users.insert({fullName:'John Doe', email:'test@test.com'}); - create user
+    - show dbs
+    - show collections
+    - db.users.find() - find users
+    - db.user.find().pretty() - format output nicely
+    - 
+
 Add authntication
   JWT
   https://scotch.io/tutorials/the-anatomy-of-a-json-web-token
