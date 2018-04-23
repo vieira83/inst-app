@@ -5,19 +5,19 @@ const passport = require('passport');
 var authRouter = express.Router();
 
 // middleware that is specific to this router
-authRouter.use(function timeLog (req, res, next) {
+app.use(function timeLog (req, res, next) {
   console.log('Time: ', Date.now())
   console.log("ERROR");
   next()
 })
 // define the home page route
-authRouter.post('/login',
-  passport.authenticate('local', { successRedirect: '/',
+app.post('/login',
+  passport.authenticate('local', { successRedirect: '/profile',
                                    failureRedirect: '/login',
                                    failureFlash: true })
 );
 
-authRouter.post('/sign-up',
+app.post('/sign-up',
   passport.authenticate('local', { successRedirect: '/',
                                    failureRedirect: '/sign-up',
                                    failureFlash: true })

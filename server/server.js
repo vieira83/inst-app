@@ -30,14 +30,16 @@ app.use(bodyParser()); // get information from html forms
 
 //app.set('view engine', 'html'); // set up ejs for templating
 app.set('views', path.join(__dirname, '../public/'));
+
 // required for passport
+app.use(session({ secret: 'ilovescotchscotchyscotchscotch' })); // session secret
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 app.use(flash()); // use connect-flash for flash messages stored in session
 
 // routes ======================================================================
 require('./routes/api')(app, passport); // load our routes and pass in our app and fully configured passport
-
+// require('./routes/auth'); 
 // launch ======================================================================
 app.listen(port);
 console.log('The magic happens on port ' + port);

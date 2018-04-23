@@ -14,11 +14,11 @@ module.exports = function(app, passport) {
     // LOGIN ===============================
     // =====================================
     // show the login form
-    app.get('/login', function(req, res, next) {
-
-        // render the page and pass in any flash data if it exists
-        res.render('login', { message: req.flash('loginMessage') });
-    });
+    // app.get('/login', function(req, res, next) {
+    //
+    //     // render the page and pass in any flash data if it exists
+    //     res.render('login', { message: req.flash('loginMessage') });
+    // });
 
     // process the login form
     // app.post('/login', do all our passport stuff here);
@@ -54,6 +54,19 @@ module.exports = function(app, passport) {
         req.logout();
         res.redirect('/');
     });
+
+
+    app.post('/login',
+      passport.authenticate('local-login', { successRedirect: '/profile',
+                                       failureRedirect: '/login',
+                                       failureFlash: true })
+    );
+
+    app.post('/sign-up',
+      passport.authenticate('local-signup', { successRedirect: '/',
+                                       failureRedirect: '/sign-up',
+                                       failureFlash: true })
+    );
 };
 
 // route middleware to make sure a user is logged in
