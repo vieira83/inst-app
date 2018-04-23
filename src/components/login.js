@@ -6,7 +6,7 @@ const Login = () =>{
     <div className="center-form panel text-center">
       <div className="panel-body">
         <h4 className="text-center"><i className="ion-log-in"></i> Log in</h4>
-        <form action="/login-app" method="post" className="form-horizontal">
+        <form action="/login" method="post" className="form-horizontal">
           <div className="form-group">
               <label className="col-sm-4 control-label">Username:</label>
               <div className="col-sm-5">

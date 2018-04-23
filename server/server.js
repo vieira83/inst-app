@@ -31,8 +31,8 @@ app.use(bodyParser()); // get information from html forms
 //app.set('view engine', 'html'); // set up ejs for templating
 app.set('views', path.join(__dirname, '../public/'));
 // required for passport
-//app.use(passport.initialize());
-//app.use(passport.session()); // persistent login sessions
+app.use(passport.initialize());
+app.use(passport.session()); // persistent login sessions
 app.use(flash()); // use connect-flash for flash messages stored in session
 
 // routes ======================================================================
