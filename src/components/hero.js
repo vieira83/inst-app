@@ -7,10 +7,12 @@ const Hero = (props) =>  {
       <div>
         <div className="App">
           <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <h1 className="App-title">{props.title}</h1>
-          </header>
-          <p className="App-intro">{props.description}</p>
+            <div className="header-container">
+              <img src={logo} className="App-logo" alt="logo" />
+              <h1 className="App-title">{props.title}</h1>
+            </div>
+            <p className="App-intro">{props.description}</p>
+          </header>  
         </div>
       </div>
     );
