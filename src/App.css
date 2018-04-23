@@ -30,7 +30,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  background-position: center bottom;
+  background-position: center 100%;
 }
 .header-container {
     background-color: rgba(0,15,1,.25);
