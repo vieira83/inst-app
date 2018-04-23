@@ -18,7 +18,7 @@ Setup - MONGODB
     - show collections
     - db.users.find() - find users
     - db.user.find().pretty() - format output nicely
-    - 
+    -
 
 Add authntication
   JWT
@@ -28,6 +28,9 @@ Add authntication
   https://gist.github.com/JonathanMH/6bd82c0954fb8f21a837ce281da4265a
 
 router
+  Setup node Routing https://scotch.io/tutorials/use-expressjs-to-deliver-html-files
+  https://dev.to/loujaybee/using-create-react-app-with-express
+
   https://www.kirupa.com/react/creating_single_page_app_react_using_react_router.htm
 
 

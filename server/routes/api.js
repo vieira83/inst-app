@@ -1,12 +1,13 @@
 
-
+var path       = require('path');
 module.exports = function(app, passport) {
 
     // =====================================
     // HOME PAGE (with login links) ========
     // =====================================
     app.get('/', function(req, res) {
-        res.render('index'); // load the index.ejs file
+        //res.render('index.html'); // load the index.ejs file
+        res.sendFile(path.join(__dirname + '../../../public/index.html'));
     });
 
     // =====================================
