@@ -11,6 +11,7 @@ var passport = require('passport');
 var flash    = require('connect-flash');
 
 var morgan       = require('morgan');
+var path       = require('path');
 var cookieParser = require('cookie-parser');
 var bodyParser   = require('body-parser');
 var session      = require('express-session');
@@ -27,11 +28,11 @@ app.use(morgan('dev')); // log every request to the console
 app.use(cookieParser()); // read cookies (needed for auth)
 app.use(bodyParser()); // get information from html forms
 
-//app.set('view engine', 'ejs'); // set up ejs for templating
-
+app.set('view engine', 'ejs'); // set up ejs for templating
+app.set('views', path.join(__dirname, 'views'));
 // required for passport
 //app.use(passport.initialize());
-//.use(passport.session()); // persistent login sessions
+//app.use(passport.session()); // persistent login sessions
 app.use(flash()); // use connect-flash for flash messages stored in session
 
 // routes ======================================================================
