@@ -45,7 +45,7 @@ module.exports = function(passport) {
 
         // find a user whose email is the same as the forms email
         // we are checking to see if the user trying to login already exists
-        User.findOne({ 'email' :  username }, function(err, user) {
+        User.findOneo({ 'email' :  username }, function(err, user) {
             // if there are any errors, return the error
             if (err)
                 return done(err);
@@ -81,7 +81,7 @@ module.exports = function(passport) {
 
     passport.use('local-login', new LocalStrategy({
         // by default, local strategy uses username and password, we will override with email
-    
+
         passReqToCallback : true // allows us to pass back the entire request to the callback
     }, function(req, email, password, done) { // callback with email and password from our form
 

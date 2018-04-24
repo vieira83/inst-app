@@ -1,4 +1,5 @@
 Follow - https://github.com/shouheiyamauchi/react-passport-example/blob/cf44d844740668c1a1a96e9627ef97b38d129e59/server/routes/auth.js
+https://gist.github.com/dylants/8030433
 
 Setup - MONGODB
   1- Install mongodb - install via yarn and add it to package.JSON
