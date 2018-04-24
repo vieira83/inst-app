@@ -4,3 +4,16 @@ body {
   font-family: sans-serif;
   background: #eee;
 }
+
+.center-form {
+  width: 515px;
+  margin: 10% auto;
+}
+
+.signup-or-separator {
+  position: relative;
+  height: 29px;
+  margin: 5px 0;
+  text-align: center;
+  background: none;
+}

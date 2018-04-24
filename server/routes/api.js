@@ -14,11 +14,11 @@ module.exports = function(app, passport) {
     // LOGIN ===============================
     // =====================================
     // show the login form
-    // app.get('/login', function(req, res, next) {
-    //
-    //     // render the page and pass in any flash data if it exists
-    //     res.render('login', { message: req.flash('loginMessage') });
-    // });
+    app.get('/login', function(req, res, next) {
+
+        // render the page and pass in any flash data if it exists
+        res.sendFile(path.join(__dirname + '../../../public/login.html'));
+    });
 
     // process the login form
     // app.post('/login', do all our passport stuff here);
@@ -27,11 +27,11 @@ module.exports = function(app, passport) {
     // SIGNUP ==============================
     // =====================================
     // show the signup form
-    app.get('/signup', function(req, res, next) {
-
-        // render the page and pass in any flash data if it exists
-        res.render('signup', { message: req.flash('signupMessage') });
-    });
+    // app.get('/signup', function(req, res, next) {
+    //
+    //     // render the page and pass in any flash data if it exists
+    //     res.render('signup', { message: req.flash('signupMessage') });
+    // });
 
     // process the signup form
     // app.post('/signup', do all our passport stuff here);
@@ -58,7 +58,7 @@ module.exports = function(app, passport) {
 
     app.post('/login',
       passport.authenticate('local-login', { successRedirect: '/profile',
-                                       failureRedirect: '/login',
+                                       failureRedirect: '/login-test',
                                        failureFlash: true })
     );
 

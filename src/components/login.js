@@ -9,18 +9,18 @@ const Login = () =>{
         <form action="/login" method="post" className="form-horizontal">
           <div className="form-group">
               <label className="col-sm-4 control-label">Username:</label>
-              <div className="col-sm-5">
+              <div className="col-sm-6">
                 <input type="password" className="form-control" type="text" name="username" placeholder="username"/>
               </div>
           </div>
           <div className="form-group">
               <label className="col-sm-4 control-label">Password:</label>
-              <div className="col-sm-5">
+              <div className="col-sm-6">
                 <input type="password" className="form-control" type="password" name="password" placeholder="Password"/>
               </div>
           </div>
           <div className="form-group">
-            <div className="col-sm-offset-4 col-sm-5">
+            <div className="col-sm-offset-4 col-sm-6">
               <input className="btn btn-success btn-block" type="submit" value="Log In"/>
             </div>
           </div>
