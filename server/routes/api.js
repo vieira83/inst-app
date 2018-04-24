@@ -50,24 +50,30 @@ module.exports = function(app, passport) {
     // =====================================
     // LOGOUT ==============================
     // =====================================
-    app.get('/logout', function(req, res) {
+    app.get('/logout', function(req, res, next) {
         req.logout();
         res.redirect('/');
     });
 
 
-    app.post('/login',
-      passport.authenticate('local-login', { successRedirect: '/profile',
-                                       failureRedirect: '/login-test',
+    app.post('/login', passport.authenticate('local-login', { successRedirect: '/profile',
+                                       failureRedirect: '/index',
                                        failureFlash: true })
     );
 
-    app.post('/sign-up',
-      passport.authenticate('local-signup', { successRedirect: '/',
+    app.post('/sign-up', passport.authenticate('local-signup', { successRedirect: '/',
                                        failureRedirect: '/sign-up',
                                        failureFlash: true })
     );
+
+    app.get('/*',function(req, res, next){
+        console.log("Error 404 request to" + req.url);
+        res.sendFile(path.join(__dirname + '../../../public/index.html'));
+    });
 };
+
+
+
 
 // route middleware to make sure a user is logged in
 function isLoggedIn(req, res, next) {
