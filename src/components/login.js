@@ -22,9 +22,24 @@ const Login = () =>{
           <div className="form-group">
             <div className="col-sm-offset-4 col-sm-5">
               <input className="btn btn-success btn-block" type="submit" value="Log In"/>
-              <a href="/sign-up">Sign up</a>
             </div>
           </div>
+
+          <br/>
+          <p className="text-center text-muted">
+            <span>Dont have an account yet? <a href="#/signup">Sign up</a></span>
+          </p>
+
+          <div className="signup-or-separator">
+            <h6 className="text">or</h6>
+            <hr></hr>
+          </div>
+          <div className="form-group">
+            <div className="col-sm-offset-4 col-sm-5">
+              <input className="btn btn-block btn-primary" value="Sign in with Instagram"/> 
+            </div>
+          </div>
+
         </form>
       </div>
     </div>
